@@ -1,0 +1,8 @@
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+  const myObj = JSON.parse(this.responseText);
+  console.log(myObj);
+  document.getElementById("demo").innerHTML = myObj.name;
+}
+xmlhttp.open("GET", "json_demo.txt");
+xmlhttp.send();
