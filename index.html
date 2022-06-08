@@ -26,18 +26,6 @@
 </head>
 
 <body>
-    <h2>Fetch a JSON file with XMLHttpRequest</h2>
-    <p id="demo"></p>
-
-    <script>
-        const xmlhttp = new XMLHttpRequest();
-        xmlhttp.onload = function() {
-        const myObj = JSON.parse(this.responseText);
-        document.getElementById("demo").innerHTML = myObj[0].name;
-        }
-        xmlhttp.open("GET", "python/anime_list.json");
-        xmlhttp.send();
-    </script>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
