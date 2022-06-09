@@ -7,6 +7,22 @@
     Created: Colorib
 ---------------------------------------------------------  */
 
+let header, footer;
+
+const headerxmlhttp = new XMLHttpRequest();
+headerxmlhttp.onload = function() {
+	header = this.responseText;
+}
+headerxmlhttp.open("GET", "../header.html");
+headerxmlhttp.send();
+
+const footerxmlhttp = new XMLHttpRequest();
+footerxmlhttp.onload = function() {
+	footer = this.responseText;
+}
+footerxmlhttp.open("GET", "../footer.html");
+footerxmlhttp.send();
+
 'use strict';
 
 (function ($) {
@@ -30,6 +46,20 @@
             var mixer = mixitup(containerEl);
         }
     });
+
+    /*------------------
+        Header
+    --------------------*/
+    // $("header").html(function(i, orig){
+    //     console.log(i)
+    //     console.log(orig)
+    //     return orig
+    // })
+
+    /*------------------
+        Footer
+    --------------------*/
+    // $("footer").load("footer.html")
 
     /*------------------
         Background Set
@@ -99,3 +129,8 @@
      });
 
 })(jQuery);
+
+$(document).ready(function(){
+    $("header").load("header.html")
+    $("footer").load("footer.html")
+});

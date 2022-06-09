@@ -1,6 +1,6 @@
 [
     {
-        "name": "saiki2",
+        "name": "saiki",
         "title": "Ох уж этот экстрасенс Сайки Кусуо!",
         "image_link": "../img/animes/saiki.jpg",
         "type": "ТВ",
@@ -11,7 +11,7 @@
         "link": "https://www.anilibria.tv/public/iframe.php?id=2624"
     },
     {
-        "name": "spy-family2",
+        "name": "spy-family",
         "title": "Семья шпиона / SPY x FAMILY",
         "image_link": "../img/animes/spy-family.jpg",
         "type": "ТВ",
