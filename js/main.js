@@ -50,16 +50,20 @@ footerxmlhttp.send();
     /*------------------
         Header
     --------------------*/
-    // $("header").html(function(i, orig){
-    //     console.log(i)
-    //     console.log(orig)
-    //     return orig
-    // })
+    $("header").load("header.html", function(responseTxt, statusTxt, xhr){
+        /*------------------
+            Navigation
+        --------------------*/
+        $(".mobile-menu").slicknav({
+            prependTo: '#mobile-menu-wrap',
+            allowParentLinks: true
+        });
+    })
 
     /*------------------
         Footer
     --------------------*/
-    // $("footer").load("footer.html")
+    $("footer").load("footer.html")
 
     /*------------------
         Background Set
@@ -83,10 +87,10 @@ footerxmlhttp.send();
     /*------------------
 		Navigation
 	--------------------*/
-    $(".mobile-menu").slicknav({
-        prependTo: '#mobile-menu-wrap',
-        allowParentLinks: true
-    });
+    // $(".mobile-menu").slicknav({
+    //     prependTo: '#mobile-menu-wrap',
+    //     allowParentLinks: true
+    // });
 
     /*------------------
 		Hero Slider
@@ -131,6 +135,4 @@ footerxmlhttp.send();
 })(jQuery);
 
 $(document).ready(function(){
-    $("header").load("header.html")
-    $("footer").load("footer.html")
 });
