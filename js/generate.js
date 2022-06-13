@@ -3,7 +3,8 @@ $(document).ready(function(){
 
 	const xmlhttp = new XMLHttpRequest();
 	xmlhttp.onload = function() {
-		animes = JSON.parse(this.responseText);
+		list = JSON.parse(this.responseText);
+		animes = list.animes;
 		$(".product__item__text").children("h5").html(function(i, origHTML){
 			if (i < animes.length)
 				return animes[i].title
@@ -27,6 +28,6 @@ $(document).ready(function(){
 		$(".comment").remove();
 		$(".view").remove()
 	}
-	xmlhttp.open("GET", "../python/anime_list.json");
+	xmlhttp.open("GET", "../python/list.json");
 	xmlhttp.send();
 });
