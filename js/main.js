@@ -58,6 +58,14 @@ footerxmlhttp.send();
             prependTo: '#mobile-menu-wrap',
             allowParentLinks: true
         });
+
+        $(".header__menu").children().children("li").each(function(i){
+            $(this).removeAttr("class")
+            pathname = window.location.pathname
+            child_href = $(this).children("a").attr("href")
+            if ("." + pathname == child_href)
+                $(this).attr("class", "active")
+        })
     })
 
     /*------------------
