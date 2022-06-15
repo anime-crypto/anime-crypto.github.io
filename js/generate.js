@@ -1,9 +1,12 @@
 let page_size = 18
+let page = 1
 
 $(document).ready(function(){
 	let params_str = window.location.search
 	let params = new URLSearchParams(params_str)
-	let page = Number(params.get("page"))
+	let param = params.get("page")
+	if (param)
+		page = Number(param)
 	let pr = (page - 1) * page_size
 
 	$(".product__pagination").children("a").attr("href", function(i, val){
