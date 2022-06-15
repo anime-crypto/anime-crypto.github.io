@@ -63,7 +63,15 @@ footerxmlhttp.send();
     /*------------------
         Footer
     --------------------*/
-    $("footer").load("footer.html")
+    $("footer").load("footer.html", function(responseTxt, statusTxt, xhr){
+        /*------------------
+            Scroll To Top
+        --------------------*/
+        $("#scrollToTopButton").on("click", function() {
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+        });
+    })
 
     /*------------------
         Background Set
@@ -83,14 +91,6 @@ footerxmlhttp.send();
             $('#search-input').val('');
         });
     });
-
-    /*------------------
-		Navigation
-	--------------------*/
-    // $(".mobile-menu").slicknav({
-    //     prependTo: '#mobile-menu-wrap',
-    //     allowParentLinks: true
-    // });
 
     /*------------------
 		Hero Slider
@@ -124,15 +124,4 @@ footerxmlhttp.send();
     --------------------*/
     $('select').niceSelect();
 
-    /*------------------
-        Scroll To Top
-    --------------------*/
-    $("#scrollToTopButton").click(function() {
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-        return false;
-     });
-
 })(jQuery);
-
-$(document).ready(function(){
-});
