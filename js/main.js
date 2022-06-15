@@ -79,6 +79,8 @@ footerxmlhttp.send();
             $("html, body").animate({ scrollTop: 0 }, "slow");
             return false;
         });
+
+        $("#year").text(new Date().getFullYear())
     })
 
     /*------------------
