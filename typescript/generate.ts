@@ -1,5 +1,5 @@
 async function hello(){
-    console.log("hello world world")
+    console.log("hello world")
 }
 
 jQuery(function() {

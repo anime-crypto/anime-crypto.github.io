@@ -1,6 +1,6 @@
 "use strict";
 async function hello() {
-    console.log("hello world world");
+    console.log("hello world");
 }
 jQuery(function () {
     let page_size = 18;
